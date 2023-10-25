@@ -1,8 +1,6 @@
 def decode(encoded):
 	pass
 
-# just a comment
-
 def encode(password):
 	pass
 
