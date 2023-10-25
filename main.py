@@ -2,7 +2,7 @@ def encode(password):
 	encoded = ""
 	for num in password:
 		num = int(num)
-		encoded += str(num + 3 % 10)
+		encoded += str((num + 3) % 10)
 	return encoded
 
 
@@ -10,10 +10,11 @@ def decode(encoded):
 	decoded = ""
 	for num in encoded:
 		num = int(num)
-		if num < 0:
+		if num - 3 < 0:
 			num += 10
 		decoded += str(num - 3)
 	return decoded
+
 
 def main():
 	encoded = None
